@@ -1,16 +1,45 @@
 <template>
-  <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <header>
+      <Header
+      @vuoto="text"
+      @arrFilm="traArr"
+      />
+    </header>
+    <main>
+      <Mainbody
+      :inText="outText"
+      :inArr="outArr"
+      
+      />
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Mainbody from './components/Mainbody.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Mainbody
+  },
+  data(){
+    return {
+
+      outText:"",
+      outArr:[],
+    }
+  },
+  methods: {
+    text(dato){
+      this.outText = dato;
+    },
+    traArr(dato){
+      this.outArr = dato;
+    }
   }
 }
 
@@ -18,13 +47,15 @@ export default {
 </script>
 
 <style lang="scss">
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  background-color: gray;
+  padding: 50px 0;
+  /* debug */
+  height: 700px;
 }
 </style>
