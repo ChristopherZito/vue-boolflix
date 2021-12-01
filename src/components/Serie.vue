@@ -2,16 +2,16 @@
     <section>
         <div>
             <h3>
-                Titolo oroginale: {{film.original_title}}
+                Titolo oroginale: {{series.original_name}}
             </h3>
              <h3>
-                Titolo: {{film.title}}
-            </h3 >
+                Titolo: {{series.name}}
+            </h3>
             <h2>
-                Lingua:{{film.original_language}}
+                Lingua: {{series.original_language}}
             </h2>
             <h2>
-                Voto: {{film.vote_average}}
+                Voto: {{series.vote_average}}
             </h2>
         </div>
     </section>
@@ -21,7 +21,7 @@
 export default {
     name: 'Element',
     props:{
-        film: Object,
+        series: Object,
     },
 }
 </script>
@@ -42,4 +42,4 @@ section {
         margin: 10px 0;
     }
 }
-</style>.
+</style>

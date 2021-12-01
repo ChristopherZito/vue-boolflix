@@ -9,26 +9,36 @@
             </span>
             
         </div>
-        <div id="blocco" v-else>
-            <Element 
-            v-for="movie,i in inArr" :key="i"
-            :film="movie"/>
-        </div>
+        <section v-else>
+            <div class="blocco" >
+                <Element 
+                v-for="movie,i in inArr" :key="i"
+                :film="movie"/>
+            </div>
+            <div class="blocco">
+                <Serie 
+                v-for="serie,m in inSerie" :key="m"
+                :series="serie"/>
+            </div>
+        </section>
     </div>
 </template>
 
 <script>
 /* import axios from "axios" */
 import Element from '../components/Element.vue'
+import Serie from '../components/Serie.vue'
 
 export default {
     name: 'Mainbody',
     components:{
         Element,
+        Serie,
     },
     props: {
         inText: String,
-        inArr: Array
+        inArr: Array,
+        inSerie: Array,
     },
     data(){
         return {
@@ -42,10 +52,16 @@ export default {
 #container{
     width: 80%;
     margin: 0 auto;
-    background-color:pink;
     /* debug */
-    height: 500px;
-    #blocco {
+    /* background-color:pink; */
+    /* height: 500px; */
+    text-align: center;
+    span {
+        color: #fff;
+        font-size: 40px;
+    }
+
+    .blocco {
         display: flex;
         flex-wrap: wrap;
     }

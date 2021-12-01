@@ -4,13 +4,14 @@
       <Header
       @vuoto="text"
       @arrFilm="traArr"
+      @arrSerie="traSerie"
       />
     </header>
     <main>
       <Mainbody
       :inText="outText"
       :inArr="outArr"
-      
+      :inSerie="outSerie"
       />
     </main>
   </div>
@@ -31,6 +32,7 @@ export default {
 
       outText:"",
       outArr:[],
+      outSerie:[],
     }
   },
   methods: {
@@ -39,6 +41,9 @@ export default {
     },
     traArr(dato){
       this.outArr = dato;
+    },
+    traSerie(dato){
+      this.outSerie = dato;
     }
   }
 }
@@ -53,9 +58,10 @@ export default {
   box-sizing: border-box;
 }
 main{
-  background-color: gray;
+  background-color: #4f4f4f;
   padding: 50px 0;
+  min-height: 700px;
   /* debug */
-  height: 700px;
+  /* height: 700px; */
 }
 </style>
