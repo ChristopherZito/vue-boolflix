@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <i class="far fa-star"></i> -->
+    <font-awesome-icon icon="star" /> 
     <header>
       <Header
       @vuoto="text"
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-/* key : 51b734778d60901847898e72aa9d7466 */
 import Header from './components/Header.vue'
 import Mainbody from './components/Mainbody.vue'
 
@@ -59,7 +58,7 @@ export default {
 <i class="fas fa-star"></i> stella piena 
 */
 
-@import "~@fontawesome/fontawesome-free/css/all.min.css";
+/* @import '~@fontawesome/fontawesome-free/css/all.min.css'; */
 
 * {
   margin: 0;

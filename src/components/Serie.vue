@@ -48,6 +48,7 @@ export default {
         return {
             dysplay:false,
             voto:this.series.vote_average,
+            /* fa-star per crearela stella, far per quella vuota, fas per quella piena*/
             star1:"Vuota",
             star2:"Vuota",
             star3:"Vuota",
