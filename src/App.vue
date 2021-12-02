@@ -1,6 +1,5 @@
 <template>
   <div>
-    <font-awesome-icon icon="star" /> 
     <header>
       <Header
       @vuoto="text"
@@ -53,13 +52,6 @@ export default {
 </script>
 
 <style lang="scss">
-/* 
-<i class="far fa-star"></i> stella vuota
-<i class="fas fa-star"></i> stella piena 
-*/
-
-/* @import '~@fontawesome/fontawesome-free/css/all.min.css'; */
-
 * {
   margin: 0;
   padding: 0;
@@ -72,4 +64,5 @@ main{
   /* debug */
   /* height: 700px; */
 }
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 </style>

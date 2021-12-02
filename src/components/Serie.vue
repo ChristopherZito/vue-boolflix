@@ -13,7 +13,7 @@
         :class="dysplay == false? `none` : `display`"
         class="info">
             <h3>
-                Titolo oroginale: {{series.original_name}}
+                Titolo originale: {{series.original_name}}
             </h3>
              <h3>
                 Titolo: {{series.name}}
@@ -31,7 +31,11 @@
             <h2>
                 Voto: {{series.vote_average}}
                 <span>
-                    {{star1}}{{star2}}{{star3}}{{star4}}{{star5}}
+                    <i :class="star1"></i>
+                    <i :class="star2"></i>
+                    <i :class="star3"></i>
+                    <i :class="star4"></i>
+                    <i :class="star5"></i>
                 </span>
             </h2>
         </div>
@@ -48,37 +52,36 @@ export default {
         return {
             dysplay:false,
             voto:this.series.vote_average,
-            /* fa-star per crearela stella, far per quella vuota, fas per quella piena*/
-            star1:"Vuota",
-            star2:"Vuota",
-            star3:"Vuota",
-            star4:"Vuota",
-            star5:"Vuota",
+            star1:"far fa-star",
+            star2:"far fa-star",
+            star3:"far fa-star",
+            star4:"far fa-star",
+            star5:"far fa-star",
         }
     },
     methods: {
         info(){
             this.dysplay = true;
             if(this.voto <= 2.4){
-                this.star1 = "Piena";
+                this.star1 = "fas fa-star";
             }else if(this.voto >= 2.5 && this.voto < 4.4) {
-                this.star1 = "Piena";
-                this.star2 = "Piena";
+                this.star1 = "fas fa-star";
+                this.star2 = "fas fa-star";
             }else if (this.voto >= 4.5 && this.voto < 6.4){
-                this.star1 = "Piena";
-                this.star2 = "Piena";
-                this.star3 = "Piena";
+                this.star1 = "fas fa-star";
+                this.star2 = "fas fa-star";
+                this.star3 = "fas fa-star";
             } else if (this.voto >= 6.5 && this.voto < 8.4){
-                this.star1 = "Piena";
-                this.star2 = "Piena";
-                this.star3 = "Piena";
-                this.star4 = "Piena";
+                this.star1 = "fas fa-star";
+                this.star2 = "fas fa-star";
+                this.star3 = "fas fa-star";
+                this.star4 = "fas fa-star";
             }else if (this.voto >= 8.5 && this.voto < 10){
-                this.star1 = "Piena";
-                this.star2 = "Piena";
-                this.star3 = "Piena";
-                this.star4 = "Piena";
-                this.star5 = "Piena";
+                this.star1 = "fas fa-star";
+                this.star2 = "fas fa-star";
+                this.star3 = "fas fa-star";
+                this.star4 = "fas fa-star";
+                this.star5 = "fas fa-star";
             }
         },
         image(){
@@ -129,4 +132,5 @@ section {
         display: block;
     }
 }
+
 </style>
