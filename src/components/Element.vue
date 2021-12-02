@@ -7,7 +7,6 @@
             <img  v-if="film.poster_path !== null"
             :src="`https://image.tmdb.org/t/p/w342` + film.poster_path" :alt="film.original_title">
             <img v-else src="https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" :alt="series.original_name">
-
         </div>
         <div 
         @mouseleave="image"
@@ -33,7 +32,7 @@
                 Voto:{{film.vote_average}}
                 <span>
                     {{star1}}{{star2}}{{star3}}{{star4}}{{star5}}
-                    </span>
+                </span>
             </h2>
         </div>
     </section>

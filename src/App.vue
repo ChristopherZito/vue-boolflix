@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <i class="far fa-star"></i> -->
     <header>
       <Header
       @vuoto="text"
@@ -53,11 +54,13 @@ export default {
 </script>
 
 <style lang="scss">
-/* @import `~@fontawesome/fontawesome-free/css/all.min.css`; */
 /* 
 <i class="far fa-star"></i> stella vuota
 <i class="fas fa-star"></i> stella piena 
 */
+
+@import "~@fontawesome/fontawesome-free/css/all.min.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -66,7 +69,7 @@ export default {
 main{
   background-color: #4f4f4f;
   padding: 50px 0;
-  min-height: 700px;
+  min-height: 925px;
   /* debug */
   /* height: 700px; */
 }
