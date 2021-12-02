@@ -30,7 +30,10 @@
                 </figure>
             </h2>
             <h2>
-                Voto: {{film.vote_average}}
+                Voto:{{film.vote_average}}
+                <span>
+                    {{star1}}{{star2}}{{star3}}{{star4}}{{star5}}
+                    </span>
             </h2>
         </div>
     </section>
@@ -45,15 +48,42 @@ export default {
     data() {
         return {
             dysplay:false,
+            voto:this.film.vote_average,
+            star1:"Vuota",
+            star2:"Vuota",
+            star3:"Vuota",
+            star4:"Vuota",
+            star5:"Vuota",
         }
     },
     methods: {
         info(){
             this.dysplay = true;
+            if(this.voto <= 2.4){
+                this.star1 = "Piena";
+            }else if(this.voto >= 2.5 && this.voto < 4.4) {
+                this.star1 = "Piena";
+                this.star2 = "Piena";
+            }else if (this.voto >= 4.5 && this.voto < 6.4){
+                this.star1 = "Piena";
+                this.star2 = "Piena";
+                this.star3 = "Piena";
+            } else if (this.voto >= 6.5 && this.voto < 8.4){
+                this.star1 = "Piena";
+                this.star2 = "Piena";
+                this.star3 = "Piena";
+                this.star4 = "Piena";
+            }else if (this.voto >= 8.5 && this.voto < 10){
+                this.star1 = "Piena";
+                this.star2 = "Piena";
+                this.star3 = "Piena";
+                this.star4 = "Piena";
+                this.star5 = "Piena";
+            }
         },
         image(){
             this.dysplay = false;
-        }
+        },
     }
 }
 </script>

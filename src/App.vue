@@ -18,8 +18,10 @@
 </template>
 
 <script>
+/* key : 51b734778d60901847898e72aa9d7466 */
 import Header from './components/Header.vue'
 import Mainbody from './components/Mainbody.vue'
+
 
 export default {
   name: 'App',
@@ -48,10 +50,14 @@ export default {
   }
 }
 
-/* key : 51b734778d60901847898e72aa9d7466 */
 </script>
 
 <style lang="scss">
+/* @import `~@fontawesome/fontawesome-free/css/all.min.css`; */
+/* 
+<i class="far fa-star"></i> stella vuota
+<i class="fas fa-star"></i> stella piena 
+*/
 * {
   margin: 0;
   padding: 0;

@@ -6,7 +6,7 @@
             </h1>
         </div>
         <div>
-            <input type="text" v-model="toSearch" placeholder="Cerca un Film" >
+            <input @keyup.enter="searching" type="text" v-model="toSearch" placeholder="Cerca un Film" >
             <button @click="searching">
                 Cerca
             </button>
