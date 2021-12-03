@@ -38,6 +38,9 @@
                     <i :class="star5"></i>
                 </span>
             </h2>
+            <h2 class="text">
+                Overview: <p>{{film.overview}}</p>
+            </h2>
         </div>
     </section>
 </template>
@@ -130,6 +133,11 @@ section {
 
     .display {
         display: block;
+    }
+
+    .text {
+        padding-right: 20px;
+        font-size: 12px;
     }
     
     

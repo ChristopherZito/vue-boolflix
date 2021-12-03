@@ -1,6 +1,6 @@
 <template>
     <div id="container">
-        <div v-if="inArr.length == 0">
+        <div v-if="inFilm.length == 0">
             <span v-if="inText == ``">
                 {{wait}}
             </span>
@@ -12,7 +12,7 @@
         <section v-else>
             <div class="blocco" >
                 <Element 
-                v-for="movie,i in inArr" :key="i"
+                v-for="movie,i in inFilm" :key="i"
                 :film="movie"/>
             </div>
             <div class="blocco">
@@ -37,7 +37,7 @@ export default {
     },
     props: {
         inText: String,
-        inArr: Array,
+        inFilm: Array,
         inSerie: Array,
     },
     data(){

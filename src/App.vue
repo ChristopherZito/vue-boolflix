@@ -3,21 +3,21 @@
     <header>
       <Header
       @vuoto="text"
-      @arrFilm="traArr"
-      @arrSerie="traSerie"
+      @filerie="inRicerca"
       />
     </header>
     <main>
       <Mainbody
       :inText="outText"
-      :inArr="outArr"
-      :inSerie="outSerie"
+      :inFilm="films"
+      :inSerie="series"
       />
     </main>
   </div>
 </template>
 
 <script>
+import axios from "axios"
 import Header from './components/Header.vue'
 import Mainbody from './components/Mainbody.vue'
 
@@ -30,22 +30,32 @@ export default {
   },
   data(){
     return {
-
       outText:"",
-      outArr:[],
-      outSerie:[],
+      films: [],
+      series: [],
     }
   },
   methods: {
     text(dato){
       this.outText = dato;
     },
-    traArr(dato){
-      this.outArr = dato;
-    },
-    traSerie(dato){
-      this.outSerie = dato;
+    inRicerca(dato){
+      if(dato !== ""){
+        axios
+          .get("https://api.themoviedb.org/3/search/movie?api_key=51b734778d60901847898e72aa9d7466&language=en-US&query="+ dato + "&page=1&include_adult=false")
+          .then((movie) => {
+            this.films = movie.data.results
+            /* console.log(this.films); */
+        });
+        axios
+        .get("https://api.themoviedb.org/3/search/tv?api_key=51b734778d60901847898e72aa9d7466&language=en-US&page=1&query="+ dato +"&include_adult=false")
+        .then((serie) => {
+          this.series = serie.data.results
+          /* console.log(serie.data.results); */
+        })
+      }
     }
+
   }
 }
 

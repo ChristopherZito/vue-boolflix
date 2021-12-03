@@ -38,6 +38,9 @@
                     <i :class="star5"></i>
                 </span>
             </h2>
+            <h2 class="text">
+                Overview: <p>{{series.overview}}</p>
+            </h2>
         </div>
     </section>
 </template>
@@ -102,6 +105,8 @@ section {
     text-align: start;
     height: 515px;
 
+    
+
     h3,h2 {
         margin: 10px 0;
     }
@@ -130,6 +135,11 @@ section {
 
     .display {
         display: block;
+    }
+
+    .text {
+        padding-right: 20px;
+        font-size: 12px;
     }
 }
 
